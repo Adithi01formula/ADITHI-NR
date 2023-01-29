@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main() {
+    int a[100],i,n;
+    printf("enter the no of elements");
+    scanf("%d",&n);
+    printf("enter the array");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    printf("the size of the array is :%d",n);
+    return 0;
+    
+}
