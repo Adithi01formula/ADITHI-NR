@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<math.h>
+
+int main()
+{
+	char ch;
+	double a, b;
+	while (1) {
+		printf("Enter an operator (+, -, *, /,e,s,c,t): ");
+		scanf(" %c", &ch);
+		printf("Enter two numbers a and b : ");
+		scanf("%lf %lf",&a,&b);
+			switch (ch) {
+			case '+':
+			printf("%.1lf + %.1lf = %.1lf\n", a, b, a + b);
+			break;
+				case '-':
+			printf("%.1lf - %.1lf = %.1lf\n", a, b, a - b);
+			break;
+			case '*':
+			printf("%.1lf * %.1lf = %.1lf\n", a, b, a * b);
+			break;
+			case '/':{
+		    if(b==0)
+                printf("operation can't be performed");
+            else
+			printf("%.1lf / %.1lf = %.1lf\n", a, b, a / b);
+			break;}
+        case'e':
+            printf("%.1lf / %.1lf = %.1lf\n", a, b,pow(a,b));
+            break;
+                case'c': 
+            {printf("cos(%f ) = %f\n", a,cos(a));
+            printf("cos(%f)=%f\n", b,cos(b));
+            break;}
+            case's':{
+            printf("sin(%f) = %f\n", a,sin(a));
+            printf("sin(%f)=%f\n",b,sin(b));
+            break;}
+            case't':{
+            printf("tan(%f) = %f\n", a,tan(a));
+            printf("tan(%f)=%f\n",b,tan(b));
+            break;}
+
+			default:
+			printf("wrong input\n");
+		}
+	}
+}
